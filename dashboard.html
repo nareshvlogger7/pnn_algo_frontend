@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .navbar a:hover {
+            background-color: #45a049;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#orderBook">Order Book</a>
+    <a href="#tradingBook">Trading Book</a>
+    <a href="#userProfile">User Profile</a>
+</div>
+
+<div class="container">
+    <h2>Trading Dashboard</h2>
+    <p>Welcome to the SmartAPI Trading Dashboard!</p>
+    <button id="startButton">Start Trading</button>
+    <div id="tradingStatus"></div>
+</div>
+
+<script>
+// Assuming you have a function to fetch user data from backend
+function fetchUserData() {
+    // Fetch user data logic (you can implement this based on your backend API)
+}
+
+document.getElementById('startButton').addEventListener('click', function() {
+    document.getElementById('tradingStatus').innerText = 'Trading started!';
+    // Implement the logic to start trading here
+});
+
+// Fetch user data on page load
+fetchUserData();
+</script>
+
+</body>
+</html>
